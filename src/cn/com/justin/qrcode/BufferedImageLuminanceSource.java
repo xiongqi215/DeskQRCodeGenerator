@@ -217,20 +217,5 @@ public final class BufferedImageLuminanceSource extends LuminanceSource {
 
     return new BufferedImageLuminanceSource(rotatedImage, newLeft, newTop, newRight - newLeft, newBottom - newTop);
   }
-public static void main(String[] args) {
-	 try {  
-         for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {  
-             NetworkInterface intf = en.nextElement();  
-             for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {  
-                 InetAddress inetAddress = enumIpAddr.nextElement();  
-                 if (!inetAddress.isLoopbackAddress() && inetAddress instanceof Inet4Address) {  
-                 //if (!inetAddress.isLoopbackAddress() && inetAddress instanceof Inet6Address) {  
-                     System.out.println(inetAddress.getHostAddress().toString());  
-                 }  
-             }  
-         }  
-     } catch (Exception e) {  
-     }  
-	System.out.println( String.format("http://www.weather.com.cn/data/cityinfo/%s.html", "10001"));
-}
+
 }

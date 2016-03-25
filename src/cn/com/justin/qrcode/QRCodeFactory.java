@@ -33,13 +33,13 @@ public class QRCodeFactory {
 	  private   int QRCODE_SIZE = 250;  
 	
 	  public QRCodeFactory(){
-		  OnColor=this.BLACK;
-		  OffColor=this.WHITE;
+		  OnColor=BLACK;
+		  OffColor=WHITE;
 	  }
 	  
   public QRCodeFactory(int QRCODE_SIZE){
-	  OnColor=this.BLACK;
-	  OffColor=this.WHITE;
+	  OnColor=BLACK;
+	  OffColor=WHITE;
 	  this.QRCODE_SIZE=QRCODE_SIZE;
 	  }
   

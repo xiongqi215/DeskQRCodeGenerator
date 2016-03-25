@@ -40,7 +40,7 @@ public class ImageUtil {
 	public  static BufferedImage resizeImage(BufferedImage bi,int width,int height) throws IOException{
 		double ratio = 0.0; // 缩放比例
 		
-        Image itemp = bi.getScaledInstance(width, height, bi.SCALE_SMOOTH);
+        Image itemp = bi.getScaledInstance(width, height, Image.SCALE_SMOOTH);
 		int src_width=bi.getWidth(null);
 		  int src_height=bi.getHeight(null);
 		  if(src_height>src_width){
@@ -74,6 +74,11 @@ public class ImageUtil {
 		  Graphics2D g=temp.createGraphics();
 		  g.drawImage(itemp, 0, 0, null);
 		  g.dispose();
+//		  ImageIO.write(temp, "JPEG", new File("D:/AAA.JPEG"));
 		  return temp;
+	}
+	
+	public static void main(String[] args) throws IOException {
+		ImageUtil.diposeWaterMark("d:/xxx.jpg","d:/IMG_20120808_224056.JPG","d:/xx.jpg");
 	}
 }
